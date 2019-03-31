@@ -26,7 +26,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 <div id="booking" class="section">
 @include('Anasayfaparts.Anasayfa')

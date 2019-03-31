@@ -15,4 +15,5 @@ Route::get('/','AnasayfaController@show')->name('giris');
 Route::group(['prefix'=>'kullanici'],function(){
     Route::get ('/signin','KullaniciController@showSignIn')->name('signin');
     Route::get ('/signup','KullaniciController@showSignUp')->name('signup');
+    Route::post ('/signup','KullaniciController@kaydol');
 });

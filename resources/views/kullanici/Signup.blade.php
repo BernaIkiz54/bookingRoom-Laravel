@@ -31,29 +31,30 @@
 
 <div class="container-login100" id="booking">
     <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-        <form class="login100-form validate-form">
+        <form class="login100-form validate-form" role="form" method="post" action="{{route('signup')}}">
+			{{csrf_field()}}
 				<span class="login100-form-title p-b-37">
 					Sign Up
 				</span>
-            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
-                <input class="input100" type="text" name="firstname" placeholder="Firsname">
+            <div for="ad" class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+                <input class="input100" type="text" name="ad" id="ad" placeholder="Firsname">
                 <span class="focus-input100"></span>
             </div>
-            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
-                <input class="input100" type="text" name="surname" placeholder="Surname">
+            <div for="soyad" class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+                <input class="input100" type="text" name="soyad" id="soyad" placeholder="Surname">
                 <span class="focus-input100"></span>
             </div>
-            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
-                <input class="input100" type="text" name="signup-email" placeholder="email">
+            <div for="email" class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+                <input class="input100" type="text" name="email" id="email" placeholder="email">
                 <span class="focus-input100"></span>
             </div>
 
-            <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-                <input class="input100" type="password" name="signup-pass" placeholder="password">
+            <div for="sifre" class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+                <input class="input100" type="password" name="sifre" id="sifre" placeholder="password">
                 <span class="focus-input100"></span>
             </div>
-            <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-                <input class="input100" type="password" name="signup-pass" placeholder="Confirm Password">
+            <div for="sifre-tekrari"class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+                <input class="input100" type="password" name="sifre-confirmation" id="sifretekrari" placeholder="Confirm Password">
                 <span class="focus-input100"></span>
             </div>
 
