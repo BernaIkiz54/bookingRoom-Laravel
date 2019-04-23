@@ -60,7 +60,7 @@
                 </a>
                 <ul class="dropdown-menu" id="list">
                     <li>
-                        <a href="###">Edit Profile</a>
+                        <a href="{{ route('profil') }}">Edit Profile</a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>

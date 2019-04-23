@@ -1,4 +1,4 @@
 @extends('master.master')
-@section('title','Anasayfa')
+@section('title','Profil Düzenle') @endsection
 @section('content')
 @endsection

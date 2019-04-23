@@ -25,34 +25,40 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/util.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+
     <!--===============================================================================================-->
+
+
 </head>
 <body>
 
-
 <div class="container-login100" id="booking">
     <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-        <form class="login100-form validate-form">
+        @include('Anasayfaparts.errors')
+        <form class="login100-form validate-form" action="{{route('signin')}}" method="POST">
+            {{csrf_field()}}
 				<span class="login100-form-title p-b-37">
 					Sign In
 				</span>
-
-            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
-                <input class="input100" type="text" name="email" placeholder="email">
+            <div for="email" class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email" >
+                <input class="input100" type="text" name="email" id="email" placeholder="email">
                 <span class="focus-input100"></span>
             </div>
 
-            <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-                <input class="input100" type="password" name="pass" placeholder="password">
+            <div for="sifre" class="wrap-input100 validate-input m-b-25" data-validate = "Enter password" >
+                <input class="input100" type="password" name="sifre" id="sifre" placeholder="password">
                 <span class="focus-input100"></span>
             </div>
-            <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-              <a href="#" class="txt2 hov1">
+            <div>
+                <input style="margin-left: 12px; " type="checkbox" name="benihatırla" checked>Beni Hatırla
+            </div>
+            <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password" style="margin-top: 10px;">
+              <a href="#" class="txt2 hov1" >
                &nbsp; &nbsp; Şifremi Unuttum</br>
               </a>
             </div>
             <div class="container-login100-form-btn">
-                <button class="login100-form-btn">
+                <button style="margin-top: 10px;" class="login100-form-btn">
                     Sign In
                 </button>
 
@@ -80,6 +86,7 @@
                 </a>
 
             </div>
+
         </form>
 
 

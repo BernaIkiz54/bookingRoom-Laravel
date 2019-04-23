@@ -19,11 +19,14 @@ class CreateKullaniciTable extends Migration
             $table->string('soyad',30);
             $table->string('email',45)->unique();
             $table->string('sifre',150);
+            $table->text('aciklama')->nullable();
+            $table->text('tanım')->nullable();
             $table->string('aktivasyon_anahtari',60)->nullable();
             $table->boolean('aktif_mi')->default(0);
             $table->timestamp('olusturma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('guncelleme_tarihi')->default(DB::raw('CURRENT_TIMESTAMP on UPDATE CURRENT_TIMESTAMP'));
             $table->timestamp('silinme_tarihi')->nullable();
+            $table->rememberToken();
         });
     }
 

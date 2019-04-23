@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,6 +5,11 @@
  */
 
 require('./bootstrap');
+
+setTimeout(function () {
+    $('.alert').slideUp(500);
+
+}, 3000);
 
 window.Vue = require('vue');
 
